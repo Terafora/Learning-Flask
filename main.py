@@ -5,6 +5,12 @@ from flask_ngrok import run_with_ngrok
 app = Flask(__name__)
 # Run flask on a public URL
 run_with_ngrok(app)
+
+# Defines the route
+@app.route('/')
+def index():
+    return "Welcome to the index page!"
+
 # Run the app, matched to the URL
 if __name__ == '__main__':
     #launches app on localhost:5000
